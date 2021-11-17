@@ -1,7 +1,7 @@
 cover-page: true                                                    # whether or not to have a cover page
 header: "My Class -=- Exam X -=- Name: ______________"              # lhead -=- chead -=- rhead
 footer: "<date> -=- Page <pagenum> of <pages> -=- My University"    # lfoot -=- cfoot -=- rfoot
-full-page: true                                                     # whether or not 1 question <=> 1 page
+full-page: true                                                     # whether or not each question gets its own page
 all-disp: true                                                      # whether or not to display all inline equations \displaystyle
 margin: 0.85in                                                      # size of margin to employ (0.85in by default)
 fontsize: 12pt                                                      # font size (12pt by default)
