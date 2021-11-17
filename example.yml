@@ -1,14 +1,14 @@
-cover-page: true                                                    # whether or not to have a cover page
-header: "My Class -=- Exam X -=- Name: ______________"              # lhead -=- chead -=- rhead
-footer: "<date> -=- Page <pagenum> of <pages> -=- My University"    # lfoot -=- cfoot -=- rfoot
-full-page: true                                                     # whether or not each question gets its own page
-all-disp: true                                                      # whether or not to display all inline equations \displaystyle
+cover-page: true                                                    # whether or not to have a cover page (false by default)
+header: "My Class -=- Exam X -=- Name: ______________"              # lhead -=- chead -=- rhead (can be omitted)
+footer: "<date> -=- Page <pagenum> of <pages> -=- My University"    # lfoot -=- cfoot -=- rfoot (can be omitted)
+full-page: true                                                     # whether or not each question gets its own page (false by default)
+all-disp: true                                                      # whether or not to display all inline equations \displaystyle (true by default)
 margin: 0.85in                                                      # size of margin to employ (0.85in by default)
 fontsize: 12pt                                                      # font size (12pt by default)
 answer-color: blue                                                  # color of answers (blue by default)
-answer-line: true                                                   # whether or not to delineate answers with a horizontal line
+answer-line: true                                                   # whether or not to delineate answers with a horizontal line (false by default)
 
-cover-contents: |                                                   # contents of cover page (written in pure latex for versatility)
+cover-contents: |                                                   # contents of cover page (written in pure latex for versatility; required if cover-page is true)
     \begin{center}
     \large \textbf{My Exam}
 
@@ -45,8 +45,8 @@ cover-contents: |                                                   # contents o
     \end{minipage}
     \end{center}
 
-q1: What is the airspeed velocity of an unladen swallow?
-a1: Depends whether the swallow is African or European
+q1: What is the airspeed velocity of an unladen swallow?            # begin each question with 'q' and then put the number after it
+a1: Depends whether the swallow is African or European              # begin each answer with 'a' and then put the number after it
 
 q2: Integrate $\sin x$ with respect to $\gamma$. 
 a2: $\int \sin x \; \text d\gamma = \gamma \sin x + c$
