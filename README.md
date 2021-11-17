@@ -1,6 +1,12 @@
 # exam generator
 yaml + python + pandoc + latex => exam PDF
 
+## requirements
+
+ - pandoc
+ - latex
+ - python
+
 ## process
 
 1. write exam questions and answers into special format yaml file
