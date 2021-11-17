@@ -8,7 +8,7 @@ fontsize: 12pt                                                      # font size 
 answer-color: blue                                                  # color of answers (blue by default)
 answer-line: true                                                   # whether or not to delineate answers with a horizontal line
 
-cover-contents: |                                                   # conternts of cover page (written in pure latex for versatility)
+cover-contents: |                                                   # contents of cover page (written in pure latex for versatility)
     \begin{center}
     \large \textbf{My Exam}
 
