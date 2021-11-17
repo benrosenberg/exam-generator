@@ -1,0 +1,79 @@
+cover-page: true                                                    # whether or not to have a cover page
+header: "My Class -=- Exam X -=- Name: ______________"              # lhead -=- chead -=- rhead
+footer: "<date> -=- Page <pagenum> of <pages> -=- My University"    # lfoot -=- cfoot -=- rfoot
+full-page: true                                                     # whether or not 1 question <=> 1 page
+all-disp: true                                                      # whether or not to display all inline equations \displaystyle
+margin: 0.85in                                                      # size of margin to employ (0.85in by default)
+fontsize: 12pt                                                      # font size (12pt by default)
+answer-color: blue                                                  # color of answers (blue by default)
+answer-line: true                                                   # whether or not to delineate answers with a horizontal line
+
+cover-contents: |                                                   # conternts of cover page (written in pure latex for versatility)
+    \begin{center}
+    \large \textbf{My Exam}
+
+    \begin{minipage}{0.7\textwidth} 
+    \normalsize
+    \begin{itemize}
+        \item You have a certain amount of time to work on this exam. 
+        \item This exam is worth 50\% of your final grade, so move with some alacrity.
+        \item There are 3 questions, each of which is worth 30 points. You get 10 points for writing your name on all pages.
+    \end{itemize} \; \\
+
+    The grading scheme is as follows: \\
+
+    \begin{center}
+    \begin{tabular}{||c|c|c||}
+        \hline
+        Question & Points & Score \\
+        \hline
+        \hline
+        0 (Name) & 10 & \\
+        \hline
+        1        & 30 & \\
+        \hline
+        2        & 30 & \\
+        \hline
+        3        & 30 & \\
+        \hline
+    \end{tabular}
+    \end{center} \; \\
+
+    By signing below I affirm that I have read and intend to adhere to My University's code of Academic Integrity: \\
+    \begin{center} $\times$ \_\_\_\_\_\_\_\_\_\_\_\_\_\_ \end{center}
+
+    \end{minipage}
+    \end{center}
+
+q1: What is the airspeed velocity of an unladen swallow?
+a1: Depends whether the swallow is African or European
+
+q2: Integrate $\sin x$ with respect to $\gamma$. 
+a2: $\int \sin x \; \text d\gamma = \gamma \sin x + c$
+
+q3: |
+    Solve the following integral: 
+    $$\int_{-\infty}^\infty \frac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}} \; \text dx.$$ 
+    Show your work.
+a3: |
+    First, let $I = \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}} \; \text dx$. 
+    Then,
+    \begin{align*}
+        I^2 &= \left(\int_{-\infty}^\infty \frac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}} \; \text dx\right)^2 \\
+        &= \int_{-\infty}^\infty \int_{-\infty}^\infty \left(\frac{1}{\sqrt{2\pi}}\right)^2 e^{-\frac{x^2}{2}} e^{-\frac{y^2}{2}} \; \text dx \; \text dy \\
+        &= \int_{-\infty}^\infty \int_{-\infty}^\infty \frac{1}{2\pi} e^{-\frac{x^2 + y^2}{2}} \; \text dx \; \text dy 
+    \end{align*}
+    Then, by polar conversion:
+    \begin{align*}
+        I^2 &= \int_{0}^{2\pi} \int_{0}^\infty \frac{1}{2\pi} e^{-\frac{r^2}{2}} \; r \;\text dr \;\text d\theta \\
+        &= 2\pi \int_{0}^\infty \frac{1}{2\pi} e^{-\frac{r^2}{2}} \; r \;\text dr \\
+        &= \int_{0}^\infty e^{-\frac{r^2}{2}} \; r \;\text dr 
+    \end{align*}
+    Now, perform the $u$-substitution $u = \dfrac{r^2}{2}$. We get $\text du = \frac{\text d}{\text dr} \left( \dfrac{r^2}{2} \right) = r$. Then:
+    \begin{align*}
+        I^2 &= \frac{1}{2} \int_{0}^\infty e^{-u} \;\text du \\
+        &= \frac{1}{2} \left[ -e^{-u} \right]_{0}^\infty \\
+        &= \frac{1}{2} \left[-e^{-\infty} - \left( -e^{0}\right)\right] \\
+        &= \frac{1}{2}
+    \end{align*}
+    Thus, $I = \sqrt{\frac{1}{2}} = \boxed{\frac{1}{\sqrt 2}}$. 
